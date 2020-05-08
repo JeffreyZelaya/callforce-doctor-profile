@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {Button, ButtonToolbar} from 'react-bootstrap'
 
 import FullTable from './table';
-import AddAvailabilityModal from "./addAvailabilityModal"
+import AddAvailabilityModal from "./AddAvailabilityModal"
 
 
 
