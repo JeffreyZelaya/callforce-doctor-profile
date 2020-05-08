@@ -16,12 +16,43 @@ class AddAvailabilityModal extends Component{
           >
             <Modal.Header closeButton>
               <Modal.Title id="contained-modal-title-vcenter">
-                Add Avaialability
+                  Add Availability
               </Modal.Title>
             </Modal.Header>
             <Modal.Body>
               <div className="container">
-                  Add form fields for Avaialability
+                <Form>
+                    <Form.Group controlId="exampleForm.ControlSelect1">
+                        <Form.Label>Position</Form.Label>
+                        <Form.Control as="select">
+                        <option>Doctor</option>
+                        <option>Assistant</option>
+                        <option>Hygienest</option>
+                        </Form.Control>
+                    </Form.Group>
+
+                    <Form.Group controlId="exampleForm.ControlSelect1">
+                        <Form.Label>Start Time</Form.Label>
+                        <Form.Control as="select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        </Form.Control>
+                    </Form.Group>
+
+                    <Form.Group controlId="exampleForm.ControlSelect1">
+                        <Form.Label>End Time</Form.Label>
+                        <Form.Control as="select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        </Form.Control>
+                    </Form.Group>
+                </Form>
               </div>
         
               
