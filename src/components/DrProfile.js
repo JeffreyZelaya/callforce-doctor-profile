@@ -15,7 +15,7 @@ class DrProfile extends Component{
         const onModalClose = () => this.setState({addModalShow:false})
         return(
             <div>
-                <h1>CALLFORCE DR. Profile</h1>
+                <h1>CALLFORCE Dr. Profile</h1>
                 <ButtonToolbar>
                     <Button
                     onClick={() => this.setState({addModalShow:true})}

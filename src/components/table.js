@@ -2,10 +2,33 @@ import React from 'react'
 import Table from 'react-bootstrap/Table'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const FullTable = (props) => {            
+const FullTable =()=> {   
+    const availabilityTable = [
+        {time:'9 AM', Doctor: '', Assistant: '', Hygienest: ''},
+        {time:'10 AM', Doctor: '', Assistant: '', Hygienest: ''},
+        {time:'11 AM', Doctor: '', Assistant: '', Hygienest: ''},
+        {time:'12 PM', Doctor: '', Assistant: '', Hygienest: ''},
+        {time:'1 PM' , Doctor: '', Assistant: '', Hygienest: ''},
+        {time:'2 PM' ,Doctor: '', Assistant: '', Hygienest: ''},
+        {time:'3 PM' ,Doctor: '', Assistant: '', Hygienest: ''},
+        {time:'4 PM' ,Doctor: '', Assistant: '', Hygienest: ''},
+        {time:'5 PM' ,Doctor: '', Assistant: '', Hygienest: ''},
+    ]
+
+    const renderAvailabilityTable = (availabilityTable, index) => {
+        return (
+            <tr key={index}>
+                <td>{availabilityTable.time}</td>
+                <td>{availabilityTable.Doctor}</td>
+                <td>{availabilityTable.Assistant}</td>
+                <td>{availabilityTable.Hygienest}</td>
+            </tr>
+        )
+    }
+    
     return (
 
-        <Table striped bordered hover>
+        <Table bordered hover>
 
             <thead>
                 <tr>
@@ -17,71 +40,12 @@ const FullTable = (props) => {
             </thead>
 
             <tbody>
-                <tr>
-                    <td>9:00 AM </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
-                <tr>
-                    <td>10:00 AM</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
-                <tr>
-                    <td>11:00 AM</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
-                <tr>
-                    <td>12:00 PM</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
-                <tr>
-                    <td>1:00 PM</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
-                <tr>
-                    <td>2:00 PM</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
-                <tr>
-                    <td>3:00 PM</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
-                <tr>
-                    <td>4:00 PM</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
-                <tr>
-                    <td>5:00 PM</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+                {availabilityTable.map(renderAvailabilityTable)}
             </tbody>
         </Table>
     )
+
+
 }
 
 export default FullTable;

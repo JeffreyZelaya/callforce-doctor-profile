@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import {Modal, Button, Form} from 'react-bootstrap'
 
+import FullTable from './table.js'
+
 
 class AddAvailabilityModal extends Component{
     constructor(props){
@@ -9,7 +11,13 @@ class AddAvailabilityModal extends Component{
 
     handleSubmit(event){
         event.preventDefault()
-        alert([event.target.Position.value, event.target.StartTime.value, event.target.EndTime.value])
+
+        alert([
+            event.target.Position.value, 
+            event.target.StartTime.value, 
+            event.target.EndTime.value,
+            
+        ])
     }
 
     render() {
