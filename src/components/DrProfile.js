@@ -8,8 +8,6 @@ import AddAvailabilityModal from "./AddAvailabilityModal"
 
 const DrProfile = () => {
         const [addModalShow, setAddModalShow] = useState(false)
-        // this.state = {addModalShow: false}
-        // const onModalClose = () => this.setState({addModalShow:false})
         const onModalClose = () => setAddModalShow(false)
         
         return(
@@ -18,7 +16,6 @@ const DrProfile = () => {
                 <ButtonToolbar>
                     <Button
                     onClick={() => setAddModalShow(true)}
-                    // onClick={() => this.setState({addModalShow:true})}
                     >ADD AVAILABILITY
                     </Button>
 
@@ -32,7 +29,5 @@ const DrProfile = () => {
             </div>
         )
     }
-
-
-
+    
 export default DrProfile

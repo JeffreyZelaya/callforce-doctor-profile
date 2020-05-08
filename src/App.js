@@ -1,6 +1,7 @@
 import React from 'react';
 import DrProfile from "./components/DrProfile"
-function App() {
+
+const App = () => {
   return (
     <div>
       <DrProfile />
