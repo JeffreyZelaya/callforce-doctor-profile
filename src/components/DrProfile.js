@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {Component, useState} from 'react'
 import {Button, ButtonToolbar} from 'react-bootstrap'
 
 import FullTable from './table';
@@ -6,24 +6,24 @@ import AddAvailabilityModal from "./AddAvailabilityModal"
 
 
 
-class DrProfile extends Component{
-    constructor(props) {
-        super(props)
-        this.state = {addModalShow: false}
-    }
-    render() {
-        const onModalClose = () => this.setState({addModalShow:false})
+const DrProfile = () => {
+        const [addModalShow, setAddModalShow] = useState(false)
+        // this.state = {addModalShow: false}
+        // const onModalClose = () => this.setState({addModalShow:false})
+        const onModalClose = () => setAddModalShow(false)
+        
         return(
             <div>
                 <h1>CALLFORCE Dr. Profile</h1>
                 <ButtonToolbar>
                     <Button
-                    onClick={() => this.setState({addModalShow:true})}
+                    onClick={() => setAddModalShow(true)}
+                    // onClick={() => this.setState({addModalShow:true})}
                     >ADD AVAILABILITY
                     </Button>
 
                     <AddAvailabilityModal 
-                    show={this.state.addModalShow}
+                    show={addModalShow}
                     onHide = {onModalClose}
                     />
                 </ButtonToolbar>
@@ -32,6 +32,7 @@ class DrProfile extends Component{
             </div>
         )
     }
-}
+
+
 
 export default DrProfile
