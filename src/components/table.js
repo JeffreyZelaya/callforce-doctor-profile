@@ -17,38 +17,65 @@ const FullTable = (props) => {
             <tbody>
                 <tr>
                 <td>9:00 AM </td>
+                <td></td>
+                <td></td>
+                <td></td>
                 </tr>
 
                 <tr>
                 <td>10:00 AM</td>
+                <td></td>
+                <td></td>
+                <td></td>
                 </tr>
 
                 <tr>
                 <td>11:00 AM</td>
+                <td></td>
+                <td></td>
+                <td></td>
                 </tr>
 
                 <tr>
                 <td>12:00 PM</td>
+                <td></td>
+                <td></td>
+                <td></td>
                 </tr>
 
                 <tr>
                 <td>1:00 PM</td>
+                <td></td>
+                <td></td>
+                <td></td>
                 </tr>
 
                 <tr>
                 <td>2:00 PM</td>
+                <td></td>
+                <td></td>
+                <td></td>
                 </tr>
 
                 <tr>
                 <td>3:00 PM</td>
+                <td></td>
+                <td></td>
+                <td></td>
                 </tr>
 
                 <tr>
                 <td>4:00 PM</td>
+                <td></td>
+                <td></td>
+                <td></td>
                 </tr>
 
                 <tr>
                 <td>5:00 PM</td>
+                <td></td>
+                <td></td>
+                <td></td>
                 </tr>
             </tbody>
         </Table>

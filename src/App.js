@@ -1,9 +1,10 @@
 import React from 'react';
-import FullTable from './components/table';
-
+import DrProfile from "./components/DrProfile"
 function App() {
   return (
-    <FullTable />
+    <div>
+      <DrProfile />
+    </div>
   );
 }
 
