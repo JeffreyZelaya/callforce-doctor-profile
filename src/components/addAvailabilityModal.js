@@ -6,13 +6,20 @@ import FullTable from './table.js'
 
 
 const AddAvailabilityModal =(props) => {
-    
+
+
     const handleSubmit=(event)=>{
         event.preventDefault()
+        const Position = event.target.Position.value 
+        const StartTime = event.target.StartTime.value
+        const EndTime = event.target.EndTime.value
+
+
+        
         alert([
-            event.target.Position.value, 
-            event.target.StartTime.value, 
-            event.target.EndTime.value,
+            Position,
+            StartTime,
+            EndTime
             
         ])
     }

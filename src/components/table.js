@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Table from 'react-bootstrap/Table'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const FullTable =()=> {   
-    const availabilityTable = [
+    const [availabilityTable, setAvailabilityTable] = useState([
         {time:'9 AM', Doctor: '', Assistant: '', Hygienest: ''},
         {time:'10 AM', Doctor: '', Assistant: '', Hygienest: ''},
         {time:'11 AM', Doctor: '', Assistant: '', Hygienest: ''},
@@ -13,11 +13,11 @@ const FullTable =()=> {
         {time:'3 PM' ,Doctor: '', Assistant: '', Hygienest: ''},
         {time:'4 PM' ,Doctor: '', Assistant: '', Hygienest: ''},
         {time:'5 PM' ,Doctor: '', Assistant: '', Hygienest: ''},
-    ]
+    ])
 
-    const renderAvailabilityTable = (availabilityTable, index) => {
+    const renderAvailabilityTable = (availabilityTable, time) => {
         return (
-            <tr key={index}>
+            <tr key={time}>
                 <td>{availabilityTable.time}</td>
                 <td>{availabilityTable.Doctor}</td>
                 <td>{availabilityTable.Assistant}</td>
@@ -44,8 +44,6 @@ const FullTable =()=> {
             </tbody>
         </Table>
     )
-
-
 }
 
 export default FullTable;

@@ -1,4 +1,4 @@
-import React, {Component, useState} from 'react'
+import React, {useState} from 'react'
 import {Button, ButtonToolbar} from 'react-bootstrap'
 
 import FullTable from './table';
@@ -29,5 +29,5 @@ const DrProfile = () => {
             </div>
         )
     }
-    
+
 export default DrProfile
