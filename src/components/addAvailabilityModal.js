@@ -1,27 +1,21 @@
 import React, {useState} from 'react'
 import {Modal, Button, Form} from 'react-bootstrap'
 
-import FullTable from './table.js'
+import {setDr9} from './table.js'
 
 
 
 const AddAvailabilityModal =(props) => {
 
 
-    const handleSubmit=(event)=>{
+    const handleSubmit=(event, props)=>{
         event.preventDefault()
-        const Position = event.target.Position.value 
-        const StartTime = event.target.StartTime.value
-        const EndTime = event.target.EndTime.value
-
-
-        
         alert([
-            Position,
-            StartTime,
-            EndTime
-            
+            event.target.Position.value, 
+            event.target.StartTime.value, 
+            event.target.EndTime.value,
         ])
+        {props.setDr9("Available")}
     }
         return (
             <div>
@@ -54,22 +48,30 @@ const AddAvailabilityModal =(props) => {
                         <Form.Group controlId="StartTime">
                             <Form.Label>Select a start time</Form.Label>
                             <Form.Control as="select">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
+                                <option>9AM</option>
+                                <option>10AM</option>
+                                <option>11AM</option>
+                                <option>12PM</option>
+                                <option>1PM</option>
+                                <option>2PM</option>
+                                <option>3PM</option>
+                                <option>4PM</option>
+                                <option>5PM</option>
                             </Form.Control>
                         </Form.Group>
 
                         <Form.Group controlId="EndTime">
                             <Form.Label>Select an end time</Form.Label>
                             <Form.Control as="select">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
+                                <option>9AM</option>
+                                <option>10AM</option>
+                                <option>11AM</option>
+                                <option>12PM</option>
+                                <option>1PM</option>
+                                <option>2PM</option>
+                                <option>3PM</option>
+                                <option>4PM</option>
+                                <option>5PM</option>
                             </Form.Control>
                         </Form.Group>
 
