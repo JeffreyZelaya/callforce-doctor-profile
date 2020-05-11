@@ -1,24 +1,12 @@
 import React, {useState} from 'react'
 import {Modal, Button, Form} from 'react-bootstrap'
 
-import {setDr9} from './table.js'
-
 
 
 const AddAvailabilityModal =(props) => {
 
-
-    const handleSubmit=(event, props)=>{
-        event.preventDefault()
-        alert([
-            event.target.Position.value, 
-            event.target.StartTime.value, 
-            event.target.EndTime.value,
-        ])
-        {props.setDr9("Available")}
-    }
-        return (
-            <div>
+    return (
+        <div>
 
             <Modal
                 {...props}
@@ -33,15 +21,14 @@ const AddAvailabilityModal =(props) => {
                 </Modal.Header>
 
                 <Modal.Body>
-                <div className="formContainer">
-                    <Form onSubmit={handleSubmit}>
+                    <Form onSubmit={props.handleSubmit}>
 
                         <Form.Group controlId="Position">
                             <Form.Label>Select a Column</Form.Label>
-                            <Form.Control as="select" placeholder="">
+                            <Form.Control as="select" >
                                 <option>Doctor</option>
                                 <option>Assistant</option>
-                                <option>Hygienest</option>
+                                <option>Hygienist</option>
                             </Form.Control>
                         </Form.Group>
 
@@ -81,7 +68,6 @@ const AddAvailabilityModal =(props) => {
                             </Button>
                         </Form.Group>
                     </Form>
-                </div>
                 </Modal.Body>
 
                 <Modal.Footer>
